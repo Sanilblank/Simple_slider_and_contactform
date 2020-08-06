@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="slidershow middle">
+        <div class="slides">
+            <div class="slide">
+                <img src=""
+            </div>
+
+        </div>
+    </div>
     
 </body>
 </html>
