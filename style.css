@@ -1,18 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-    background: #34495e;
+    background-color: rgba(27, 31, 34, 0.85);
 }
 
 .slidershow{
     width: 700px;
     height: 400px;
     overflow: hidden;
+    box-shadow: 8px 8px 40px 10px black;
 }
 
 .middle{
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -106,4 +107,10 @@ ul li a{
 
 ul li a:hover{
     color: black;
+}
+
+h1{
+    text-align: center;
+    letter-spacing: 3px;
+    color: whitesmoke;
 }

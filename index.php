@@ -1,6 +1,8 @@
 <?php
     require_once 'includes/header.php';
 ?>
+
+    <h1>Slider Animation</h1>
     <div class="slidershow middle">
         <div class="slides">
             <input type="radio" name="r" id="r1" checked>
