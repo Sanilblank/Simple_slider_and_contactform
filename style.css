@@ -79,3 +79,31 @@ input[name="r"]{
 #r5:checked ~ .s1{
     margin-left: -80%;
 }
+
+header{
+    height: 55px;
+    background-color: cadetblue;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style-type: none ;
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+    padding: 5px 20px 5px 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+ul li a:hover{
+    color: black;
+}
