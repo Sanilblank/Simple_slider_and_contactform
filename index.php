@@ -1,11 +1,6 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<?php
+    require_once 'includes/header.php';
+?>
     <div class="slidershow middle">
         <div class="slides">
             <input type="radio" name="r" id="r1" checked>
@@ -40,5 +35,6 @@
         <label for="r5" class="bar"></label>
     </div>
     
-</body>
-</html>
+<?php
+    require_once 'includes/footer.php';
+?>
