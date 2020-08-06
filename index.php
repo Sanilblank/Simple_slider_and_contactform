@@ -9,7 +9,19 @@
     <div class="slidershow middle">
         <div class="slides">
             <div class="slide">
-                <img src=""
+                <img src="images/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/5.jpg" alt="">
             </div>
 
         </div>
