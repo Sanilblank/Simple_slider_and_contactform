@@ -9,12 +9,12 @@
     <div class="slidershow middle">
         <div class="slides">
             <input type="radio" name="r" id="r1" checked>
-            <input type="radio" name="r" id="r1">
-            <input type="radio" name="r" id="r1">
-            <input type="radio" name="r" id="r1">
-            <input type="radio" name="r" id="r1">
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
 
-            <div class="slide">
+            <div class="slide s1">
                 <img src="images/1.jpg" alt="">
             </div>
             <div class="slide">
