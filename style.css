@@ -13,14 +13,14 @@ body{
 
 .middle{
     position: absolute;
-    top: 58%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
 .navigation{
     position: absolute;
-    bottom: 60px;
+    bottom: 95px;
     left: 50%;
     transform: translate(-50%);
     display: flex;
