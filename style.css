@@ -114,3 +114,54 @@ h1{
     letter-spacing: 3px;
     color: whitesmoke;
 }
+
+.contactForm{
+    text-align: center;
+    margin-top: 40px;
+}
+
+input{
+    display: block;
+    border: #ff5722;
+    outline: none;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 0 10px #ff5722;
+    width: 240px;
+    height: 30px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-radius: 25px;
+    color: darkgreen;
+}
+
+textarea{
+    display: block;
+    margin-left: 39.5%;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    font-size: 18px; 
+    box-shadow: 0 0 5px #ff5722;
+
+}
+
+::placeholder{
+    color: darkgreen;
+}
+
+button{
+    margin-top: 25px;
+    width: 240px;
+    height: 60px;
+    background-color: #ff5722;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
