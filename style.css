@@ -133,7 +133,6 @@ input{
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     border-radius: 25px;
-    color: darkgreen;
 }
 
 textarea{
@@ -146,10 +145,6 @@ textarea{
     font-size: 18px; 
     box-shadow: 0 0 5px #ff5722;
 
-}
-
-::placeholder{
-    color: darkgreen;
 }
 
 button{
