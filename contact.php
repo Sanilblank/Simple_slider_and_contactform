@@ -10,32 +10,44 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
     if(isset($_POST['submit'])){
-        
-        $mail = new PHPMailer();
-        $mail->isSMTP();
-        $mail->Host = "smtp.gmail.com";
-        $mail->SMTPAuth = "true";
-        $mail->SMTPSecure = "tls";
-        $mail->Port = "587";
-        $mail->Username = "blancmanandhar@gmail.com";
-        $mail->Password = "sabitashakyamanandhar";
-        $mail->Subject='Form Submission: ' . $_POST['subject'];
-        $mail->setFrom($_POST['email'],$_POST['name']);
-        $mail->isHTML(true);
-        $mail->Body='<p>Name: '. $_POST['name']. '<br>Email: ' .$_POST['email'].'<br>
-        Message: ' . $_POST['msg'] . '</p>';
-        $mail->addAddress('blancmanandhar@gmail.com');
-        
-        //$mail->addReplyTo($_POST['email'],$_POST['name']);        
 
-        if(!$mail->send()){
-            $result="Something went wrong. Please try again.";
-        }
-        else{
-            $result="Thanks " . $_POST['name']." for contacting us.";
-        }
-        $mail->smtpClose();
+        $captcha = $_POST["g-recaptcha-response"];
+        $secretkey = "6LeoprsZAAAAALf5sxzvkTBwYV4dv-n-tPHW6n4t";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.urldecode($secretkey).'&response='.urldecode($captcha).'&remoteip'.$ip;
+        $response = file_get_contents($url);
+        $responseKey = json_decode($response,TRUE);
         
+        if($responseKey["success"]){
+            
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->Host = "smtp.gmail.com";
+            $mail->SMTPAuth = "true";
+            $mail->SMTPSecure = "tls";
+            $mail->Port = "587";
+            $mail->Username = "blancmanandhar@gmail.com";
+            $mail->Password = "sabitashakyamanandhar";
+            $mail->Subject='Form Submission: ' . $_POST['subject'];
+            $mail->setFrom($_POST['email'],$_POST['name']);
+            $mail->isHTML(true);
+            $mail->Body='<p>Name: '. $_POST['name']. '<br>Email: ' .$_POST['email'].'<br>
+            Message: ' . $_POST['msg'] . '</p>';
+            $mail->addAddress('blancmanandhar@gmail.com');
+            
+            //$mail->addReplyTo($_POST['email'],$_POST['name']);        
+
+            if(!$mail->send()){
+                $result="Something went wrong. Please try again.";
+            }
+            else{
+                $result="Thanks " . $_POST['name']." for contacting us.";
+            }
+            $mail->smtpClose();
+            }
+        else{
+                $result="Please perform the captcha test";
+            }
     }
 ?>
 
