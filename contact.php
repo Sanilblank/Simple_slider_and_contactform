@@ -70,7 +70,7 @@
     <form action='contact.php' method="POST">
         <input type="text" name="name" placeholder="Enter your name" maxlength="30" minlength="4" required>
         <input type="email" name="email" placeholder="Enter your email" maxlength="30" minlength="10" required>
-        <input type="text" name="subject" placeholder="Enter your subject" maxlength="20" minlength="5" required>
+        <input type="text" name="subject" placeholder="Enter your subject" maxlength="30" minlength="5" required>
         <textarea name="msg" rows="5" cols="30" placeholder="Write your message here" required></textarea>
         <div class="g-recaptcha" data-sitekey="6LeoprsZAAAAAHDD2xO0NEl4WHy9QMBWAUIIldrm"></div>
         <br/>
