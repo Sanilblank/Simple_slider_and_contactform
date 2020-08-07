@@ -160,3 +160,10 @@ button{
     outline: none;
     border: none;
 }
+
+h5{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #ff5722;
+}
