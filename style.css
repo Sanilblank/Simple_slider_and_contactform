@@ -120,6 +120,11 @@ h1{
     margin-top: 20px;
 }
 
+.g-recaptcha{
+    margin-top: 20px;
+    margin-left: 39.3%;
+}
+
 input{
     display: block;
     border: #ff5722;
@@ -148,7 +153,7 @@ textarea{
 }
 
 button{
-    margin-top: 25px;
+    margin-top: 0px;
     width: 240px;
     height: 60px;
     background-color: #ff5722;
@@ -165,5 +170,5 @@ h5{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
-    color: #ff5722;
+    color: red;
 }
