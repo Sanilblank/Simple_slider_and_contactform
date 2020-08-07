@@ -1,5 +1,6 @@
 <?php
     require 'includes/header.php';
+    require 'includes/database.php';
 ?>
 <?php
     $result="";
@@ -10,6 +11,10 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
     if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $msg = $_POST['msg'];
 
         $captcha = $_POST["g-recaptcha-response"];
         $secretkey = "6LeoprsZAAAAALf5sxzvkTBwYV4dv-n-tPHW6n4t";
@@ -44,6 +49,9 @@
                 $result="Thanks " . $_POST['name']." for contacting us.";
             }
             $mail->smtpClose();
+
+            saveinDatabase($name, $email, $subject, $msg, $conn);
+
             }
         else{
                 $result="Please perform the captcha test";
@@ -70,6 +78,22 @@
         <button type="submit" name="submit">Submit</button>
     </form>
 </div>
+
+<?php
+    function saveinDatabase($name, $email, $subject, $msg, $conn){
+        $sql = "INSERT INTO contact (name, email, subject, msg) VALUES (?,?,?,?)";
+        $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt,$sql)){
+            header('Location: contact.php?error=sqlerror');
+            exit();
+        }
+        else{
+            mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $subject, $msg);
+            mysqli_stmt_execute($stmt);
+        }
+
+    }
+?>
 
 
 
