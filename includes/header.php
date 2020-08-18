@@ -12,7 +12,8 @@
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="contact.php">Contact</a>
+                    <li><a href="messages.php">Messages</a></li>
                 </ul>
             </nav>
         </header>
